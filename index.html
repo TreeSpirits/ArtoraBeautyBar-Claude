@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Artora Beauty Bar</title>
+<meta name="description" content="Artora Beauty Bar in Tenafly, NJ. Dimensional color, balayage, precision cuts, keratin, extensions and scalp treatments by colorist Ayfer Deniz. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Artora Beauty Bar","url":"https://artorabeautybar.com","telephone":"+1-201-768-0383","email":"admin@artorabeautybar.com","image":"https://artorabeautybar.com/img/work-bronde-balayage.jpg","address":{"@type":"PostalAddress","streetAddress":"8 South Summit Street, Side Entrance, 2nd Floor","addressLocality":"Tenafly","addressRegion":"NJ","postalCode":"07670","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:30","closes":"18:00"}],"founder":{"@type":"Person","name":"Ayfer Deniz"},"sameAs":["https://www.instagram.com/artorabeautybar/"]}
+</script>
+<meta property="og:title" content="Artora Beauty Bar · Tenafly, NJ">
+<meta property="og:description" content="Dimensional color, balayage, cuts, keratin and extensions by Ayfer Deniz. Book online.">
+<meta property="og:image" content="https://artorabeautybar.com/img/work-bronde-balayage.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/monogram.svg" type="image/svg+xml">
+</head>
+<body>
+<style>
+/* Layout: airy single scroll; arch-shaped frames echo the salon's arched doorways; generous whitespace, asymmetric two-column bands. */
+:root{
+  --bg:#F7F3EE;          /* warm off-white */
+  --surface:#EFE7DC;     /* champagne tint */
+  --ink:#1C1A18;         /* soft black */
+  --muted:#6A6158;       /* warm grey */
+  --accent:#A8875F;      /* champagne bronze */
+  --accent-deep:#80643F; /* bronze for small text */
+  --line:rgba(28,26,24,.14);
+  --on-ink:#F7F3EE;
+  --display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body:"Jost", "Futura", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --gutter:max(20px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(20px, env(safe-area-inset-right, 0px));
+  --max:1240px;
+  --arch:999px 999px 6px 6px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.eyebrow{font-family:var(--body);font-weight:500;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent-deep)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background .3s,color .3s,border-color .3s;white-space:nowrap}
+.btn-solid{background:var(--ink);color:var(--on-ink);border:1px solid var(--ink)}
+.btn-solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--on-ink)}
+.arrow{display:inline-block;transition:transform .3s}
+a:hover .arrow{transform:translateX(4px)}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;transition:background .4s,box-shadow .4s}
+.nav.scrolled{background:rgba(247,243,238,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.brand img{height:34px;width:auto}
+.brand span{font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.42em;text-transform:uppercase;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:400;position:relative;padding:6px 0}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+.nav .btn{padding:12px 22px;font-size:12px}
+@media (max-width:900px){.nav-links li:not(.keep){display:none}.brand span{display:none}}
+
+/* HERO */
+.hero{padding-block:28px 96px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero-copy{min-width:0;display:grid;gap:30px}
+.hero h1{font-size:clamp(46px,6.6vw,96px)}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{font-size:clamp(17px,1.4vw,19px);color:var(--muted);max-width:30em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;letter-spacing:.06em;color:var(--muted);padding-top:10px;border-top:1px solid var(--line)}
+.hero-meta b{font-weight:500;color:var(--ink)}
+.hero-media{position:relative;justify-self:end;width:min(100%,460px)}
+.hero-media .frame{aspect-ratio:9/14;border-radius:var(--arch);overflow:hidden;background:var(--surface)}
+.hero-media video,.hero-media .frame img{width:100%;height:100%;object-fit:cover}
+.hero-media .ring{position:absolute;inset:-16px -16px auto auto;width:100%;aspect-ratio:9/14;border:1px solid var(--accent);border-radius:var(--arch);z-index:-1}
+.hero-media .tag{position:absolute;left:-36px;bottom:48px;background:var(--bg);padding:16px 20px;border-radius:4px;box-shadow:0 18px 40px -20px rgba(28,26,24,.35);display:grid;gap:2px}
+.hero-media .tag small{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-deep);font-weight:500}
+.hero-media .tag span{font-family:var(--display);font-style:italic;font-size:19px}
+@media (max-width:900px){
+  .hero{padding-block:8px 72px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-media{justify-self:center;width:min(86%,400px)}
+  .hero-media .tag{left:-14px}
+}
+
+/* STATEMENT */
+.statement{padding-block:40px 110px;text-align:center}
+.statement p{font-family:var(--display);font-style:italic;font-size:clamp(28px,3.6vw,46px);line-height:1.25;max-width:20em;margin:0 auto;text-wrap:balance}
+.statement .eyebrow{display:block;margin-bottom:22px}
+.mono-divider{width:46px;margin:0 auto 26px;opacity:.85}
+
+/* ABOUT */
+.about{background:var(--surface);padding-block:120px}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:88px;align-items:center}
+.portrait{position:relative}
+.portrait .frame{aspect-ratio:4/5;border-radius:var(--arch);overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:52% 20%}
+.portrait figcaption{margin-top:16px;font-size:13px;letter-spacing:.08em;color:var(--muted)}
+.about-copy{min-width:0;display:grid;gap:26px}
+.about-copy h2{font-size:clamp(38px,4.6vw,64px)}
+.about-copy h2 em{font-style:italic;color:var(--accent)}
+.about-copy p{max-width:34em}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:28px;border-top:1px solid var(--line);margin-top:8px}
+.facts div{display:grid;gap:4px;align-content:start}
+.facts strong{font-family:var(--display);font-weight:400;font-size:34px;line-height:1}
+.facts span{font-size:13px;line-height:1.5;color:var(--muted)}
+@media (max-width:900px){.about{padding-block:84px}.about-grid{grid-template-columns:1fr;gap:48px}.portrait{max-width:420px}}
+@media (max-width:520px){.facts{grid-template-columns:1fr;gap:18px}}
+
+/* PRESS */
+.press{padding-block:110px}
+.press-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:72px;align-items:center}
+.press-img{border-radius:4px;overflow:hidden;aspect-ratio:3/4;max-width:420px}
+.press-img img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+blockquote{margin:0;display:grid;gap:26px;min-width:0}
+blockquote p{font-family:var(--display);font-size:clamp(24px,2.6vw,34px);line-height:1.35}
+blockquote p::before{content:"\201C";display:block;font-size:90px;line-height:.6;color:var(--accent);margin-bottom:14px}
+blockquote footer{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+blockquote footer cite{font-style:italic;font-family:var(--display);letter-spacing:0;text-transform:none;font-size:17px;color:var(--ink)}
+@media (max-width:900px){.press{padding-block:84px}.press-grid{grid-template-columns:1fr;gap:44px}.press-img{max-width:340px}}
+
+/* PHILOSOPHY */
+.philosophy{padding-block:20px 120px}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}
+.section-head h2{font-size:clamp(38px,4.6vw,64px)}
+.section-head h2 em{font-style:italic;color:var(--accent)}
+.section-head p{color:var(--muted);max-width:30em;justify-self:end}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pillar{padding:40px 34px 44px;border:1px solid var(--line);border-radius:var(--arch);display:grid;gap:16px;align-content:start;text-align:center;background:var(--bg);transition:border-color .4s,transform .4s}
+.pillar:hover{border-color:var(--accent);transform:translateY(-4px)}
+.pillar .icon{width:52px;height:52px;margin:30px auto 8px;color:var(--accent)}
+.pillar h3{font-size:28px}
+.pillar p{font-size:16px;color:var(--muted)}
+@media (max-width:900px){.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:44px}.section-head p{justify-self:start}.pillars{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+
+/* SERVICES */
+.services{background:var(--ink);color:var(--on-ink);padding-block:120px}
+.services .eyebrow{color:var(--accent)}
+.services .section-head p{color:rgba(247,243,238,.7)}
+.svc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
+.svc-visual{position:sticky;top:110px;aspect-ratio:4/5;border-radius:var(--arch);overflow:hidden;background:#2a2622}
+.svc-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.svc-visual img.on{opacity:1}
+.svc-list{list-style:none;margin:0;padding:0;min-width:0}
+.svc{border-top:1px solid rgba(247,243,238,.18)}
+.svc:last-child{border-bottom:1px solid rgba(247,243,238,.18)}
+.svc a{display:grid;grid-template-columns:1fr auto;gap:8px 24px;padding:30px 4px;text-decoration:none;color:inherit}
+.svc h3{font-size:clamp(26px,2.6vw,36px);transition:color .3s}
+.svc p{grid-column:1/-1;color:rgba(247,243,238,.7);font-size:16px;max-width:36em}
+.svc .go{align-self:center;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.svc a:hover h3,.svc a:focus-visible h3,.svc.active h3{color:var(--accent)}
+.svc-note{margin-top:34px;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;color:rgba(247,243,238,.7);font-size:15px}
+.services .btn-solid{background:var(--on-ink);color:var(--ink);border-color:var(--on-ink)}
+.services .btn-solid:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+@media (max-width:900px){.services{padding-block:84px}.svc-grid{grid-template-columns:1fr;gap:0}.svc-visual{display:none}}
+
+/* GALLERY */
+.gallery{padding-block:120px 60px}
+.masonry{columns:4 260px;column-gap:18px}
+.masonry figure{margin:0 0 18px;break-inside:avoid;position:relative;overflow:hidden;border-radius:4px;background:var(--surface)}
+.masonry img{width:100%;height:auto;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.masonry figure:hover img{transform:scale(1.04)}
+.masonry figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;font-size:13px;letter-spacing:.08em;color:#F7F3EE;background:linear-gradient(transparent,rgba(28,26,24,.55));opacity:0;transition:opacity .4s}
+.masonry figure:hover figcaption,.masonry figure:focus-within figcaption{opacity:1}
+@media (hover:none){.masonry figcaption{opacity:1}}
+@media (max-width:900px){.gallery{padding-block:84px 40px}}
+@media (max-width:600px){.masonry{columns:2;column-gap:10px}.masonry figure{margin-bottom:10px}.masonry figcaption{font-size:11px;padding:30px 10px 10px}}
+
+/* REELS */
+.reels{padding-block:60px 120px}
+.reels-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px}
+.reels-head h2{font-size:clamp(32px,3.6vw,48px)}
+.reels-head h2 em{font-style:italic;color:var(--accent)}
+.reel-track{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(200px,22vw,280px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;padding-left:var(--gutter);padding-right:var(--gutter-r);max-width:calc(var(--max) + 400px);margin:0 auto;scrollbar-width:thin;scrollbar-color:var(--accent) transparent}
+.reel{scroll-snap-align:start;position:relative;aspect-ratio:9/16;border-radius:var(--arch);overflow:hidden;background:var(--surface);margin:0}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel figcaption{position:absolute;left:0;right:0;bottom:0;padding:50px 18px 18px;color:#F7F3EE;font-size:13px;letter-spacing:.1em;background:linear-gradient(transparent,rgba(28,26,24,.6))}
+.reel-ig{scroll-snap-align:start;aspect-ratio:9/16;border-radius:var(--arch);border:1px solid var(--accent);display:grid;place-content:center;gap:14px;text-align:center;text-decoration:none;padding:24px;transition:background .4s}
+.reel-ig:hover{background:var(--surface)}
+.reel-ig svg{width:34px;height:34px;margin:0 auto;color:var(--accent)}
+.reel-ig strong{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.2}
+.reel-ig span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep)}
+
+/* VISIT */
+.visit{background:var(--surface);padding-block:120px}
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:start}
+.visit-copy{min-width:0;display:grid;gap:30px}
+.visit-copy h2{font-size:clamp(38px,4.6vw,64px)}
+.visit-copy h2 em{font-style:italic;color:var(--accent)}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding-top:30px;border-top:1px solid var(--line)}
+.info h3{font-family:var(--body);font-weight:500;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px}
+.info address{font-style:normal}
+.info .note{display:inline-block;margin-top:8px;font-size:14px;color:var(--muted)}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:16px}
+.hours td{padding:5px 0;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right;white-space:nowrap}
+.hours tr.closed td{color:var(--muted)}
+.hours tr.today td{font-weight:500;color:var(--ink)}
+.contact-lines{display:grid;gap:6px}
+.contact-lines a{text-decoration:none;border-bottom:1px solid var(--line);justify-self:start;transition:border-color .3s}
+.contact-lines a:hover{border-color:var(--accent)}
+.visit-cta{display:flex;flex-wrap:wrap;gap:14px}
+.visit-card{position:relative;display:grid;gap:22px}
+.visit-card .frame{aspect-ratio:1/1.05;border-radius:var(--arch);overflow:hidden}
+.visit-card img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.visit-card p{font-family:var(--display);font-style:italic;font-size:22px;text-align:center}
+@media (max-width:900px){.visit{padding-block:84px}.visit-grid{grid-template-columns:1fr;gap:56px}.visit-card{max-width:400px}}
+@media (max-width:560px){.info{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer.site{padding-block:90px 60px;text-align:center}
+.foot-logo{width:min(280px,70%);margin:0 auto 34px;color:var(--ink)}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 34px;list-style:none;margin:0 0 30px;padding:0}
+.foot-nav a{text-decoration:none;font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.foot-nav a:hover{color:var(--accent-deep)}
+.fine{font-size:13px;color:var(--muted);display:grid;gap:4px}
+
+/* MOBILE BOOK BAR */
+.mbar{display:none}
+@media (max-width:900px){
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px var(--gutter-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gutter);background:rgba(247,243,238,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 -1px 0 var(--line)}
+  .mbar .btn{padding:14px 10px}
+  footer.site{padding-bottom:130px}
+}
+
+/* reveal */
+.rv{transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .rv.pre{opacity:.001;transform:translateY(26px)}
+@media (prefers-reduced-motion:reduce){.js .rv.pre{opacity:1;transform:none}.masonry img,.pillar{transition:none}}
+</style>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Artora Beauty Bar, back to top">
+      <img src="img/monogram.svg" alt="" width="58" height="34">
+      <span>Artora Beauty Bar</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li class="keep"><a class="btn btn-solid" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Hair salon · Tenafly, New Jersey</span>
+        <h1>Creating art hair, <em>lifting auras.</em></h1>
+        <p class="lede">Dimensional color, beautiful cuts and healthy-hair care from colorist and salon owner Ayfer Deniz. More than two decades behind the chair, now in a light-filled studio on South Summit Street.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book your appointment <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="#services">Explore services</a>
+        </div>
+        <div class="hero-meta">
+          <span><b>Tue–Fri</b> 10–6</span>
+          <span><b>Sat</b> 9:30–6</span>
+          <span><b>(201) 768-0383</b></span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="ring" aria-hidden="true"></div>
+        <div class="frame">
+          <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="media/hero.jpg" aria-label="Soft blonde waves catching the light, styled at Artora">
+            <source src="media/hero.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="tag"><small>Signature</small><span>Lived-in blonde</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement">
+    <div class="wrap">
+      <img class="mono-divider" src="img/monogram.svg" alt="" width="46" height="27">
+      <p class="rv">Hair is our passion, and it shows on every client who walks out our door.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <figure class="portrait rv" style="margin:0">
+        <div class="frame"><img src="img/ayfer-portrait.jpg" alt="Ayfer Deniz, owner of Artora Beauty Bar" width="1066" height="1333" loading="lazy"></div>
+        <figcaption>Ayfer Deniz, founder &amp; colorist</figcaption>
+      </figure>
+      <div class="about-copy">
+        <span class="eyebrow">Meet Ayfer</span>
+        <h2>A colorist's eye, <em>a sculptor's hand.</em></h2>
+        <p>Before Artora, Ayfer owned and ran Ayfer Salon on Closter Dock Road in Closter. She created it as a refuge from a frazzled world, devoted to the lost art of pampering. Along the way she styled hair for models and runway shows, and her color work appeared in <em>People</em> magazine.</p>
+        <p>Artora Beauty Bar is the next chapter: a personal, light-filled studio in Tenafly. Ayfer is a lifelong student of fashion, art and technique. She keeps learning the newest cutting and color methods, and she still believes the best hair is made for real life, not just for the moment you leave the chair.</p>
+        <div class="facts">
+          <div><strong>20+</strong><span>years in hair &amp; color</span></div>
+          <div><strong><em>People</em></strong><span>Magazine feature, December 2005</span></div>
+          <div><strong>Runway</strong><span>styling for models &amp; shows</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="press">
+    <div class="wrap press-grid">
+      <div class="press-img rv"><img src="img/ayfer-studio.jpg" alt="Ayfer Deniz on set at a photo shoot in her salon" width="963" height="1284" loading="lazy"></div>
+      <blockquote class="rv">
+        <p>Ayfer Deniz believes in the transformative power of updating one's hair color, making life more colorful. Hair color no longer has to look flat and matte. You can get natural-looking color with brilliant dimension and shine.</p>
+        <footer>As featured in <cite>People</cite>, December 2005</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="philosophy">
+    <div class="wrap">
+      <div class="section-head">
+        <div style="display:grid;gap:18px">
+          <span class="eyebrow">Styling philosophy</span>
+          <h2>Personal, dimensional, <em>and made to last.</em></h2>
+        </div>
+        <p>Whether you want a cutting-edge look or a timeless classic, the goal is hair that reflects who you are and still looks beautiful weeks after your visit.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar rv">
+          <svg class="icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="26" cy="22" r="11"/><path d="M8 46c3-9 10-13 18-13s15 4 18 13"/></svg>
+          <h3>We listen first</h3>
+          <p>Your bone structure, features and natural coloring, combined with your own vision, shape every cut and every formula. Nothing is one-size-fits-all.</p>
+        </article>
+        <article class="pillar rv">
+          <svg class="icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M14 44c0-14 6-22 12-36 6 14 12 22 12 36"/><path d="M20 44c0-10 3-16 6-24 3 8 6 14 6 24"/></svg>
+          <h3>Color with dimension</h3>
+          <p>Warm golds, rich browns, buttery blondes and soft pastels, mixed by hand. The result is color with depth and shine that never reads flat.</p>
+        </article>
+        <article class="pillar rv">
+          <svg class="icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M26 8c8 8 14 15 14 23a14 14 0 0 1-28 0c0-8 6-15 14-23z"/><path d="M20 33a6 6 0 0 0 6 6"/></svg>
+          <h3>A plan for healthy hair</h3>
+          <p>Not sure how to get the look you want? We build a plan together. You'll leave with advice for keeping your hair healthy and vibrant between visits.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div style="display:grid;gap:18px">
+          <span class="eyebrow">Services</span>
+          <h2>The menu</h2>
+        </div>
+        <p>Every service starts with a conversation. See the full menu and current pricing, and choose a time that suits you, on our booking page.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-visual" aria-hidden="true">
+          <img class="on" data-k="cut" src="img/work-platinum-lob.jpg" alt="" loading="lazy">
+          <img data-k="color" src="img/work-bronde-balayage.jpg" alt="" loading="lazy">
+          <img data-k="keratin" src="img/work-brunette-dimension.jpg" alt="" loading="lazy">
+          <img data-k="ext" src="img/work-long-blonde.jpg" alt="" loading="lazy">
+          <img data-k="spa" src="img/work-brunette-waves.jpg" alt="" loading="lazy">
+        </div>
+        <ul class="svc-list">
+          <li class="svc active" data-k="cut"><a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener"><h3>Haircuts &amp; Styling</h3><span class="go">Book <span class="arrow">→</span></span><p>Precision cuts shaped to your features and how you really wear your hair, from soft layers and curtain bangs to sharp bobs and pixies. Blowouts and special-occasion styling too.</p></a></li>
+          <li class="svc" data-k="color"><a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener"><h3>Color, Highlights &amp; Balayage</h3><span class="go">Book <span class="arrow">→</span></span><p>Single-process color, dimensional highlights and hand-painted balayage. Natural shades or pastel hues, plus a plan to keep your color vibrant between visits.</p></a></li>
+          <li class="svc" data-k="keratin"><a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener"><h3>Keratin Treatments</h3><span class="go">Book <span class="arrow">→</span></span><p>Full keratin treatments and keratin blowouts that smooth frizz, add shine and cut your styling time for weeks at a time.</p></a></li>
+          <li class="svc" data-k="ext"><a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener"><h3>Hair Extensions</h3><span class="go">Book <span class="arrow">→</span></span><p>Added length, volume or both, color-matched and blended so seamlessly that only you will know.</p></a></li>
+          <li class="svc" data-k="spa"><a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener"><h3>Scalp &amp; Spa Treatments</h3><span class="go">Book <span class="arrow">→</span></span><p>Restorative scalp and hair treatments that rebalance, hydrate and strengthen. Healthy hair starts at the root.</p></a></li>
+        </ul>
+      </div>
+      <div class="svc-note">
+        <a class="btn btn-solid" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">See full menu &amp; book <span class="arrow">→</span></a>
+        <span>Not sure what to book? Call <b style="font-weight:500;color:var(--on-ink)">(201) 768-0383</b> and we'll help.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div style="display:grid;gap:18px">
+          <span class="eyebrow">Recent work</span>
+          <h2>Made at <em>Artora</em></h2>
+        </div>
+        <p>Real Artora clients and real results, from soft lived-in blondes to bold pastel pixies.</p>
+      </div>
+      <div class="masonry">
+        <figure class="rv"><img src="img/work-bronde-balayage.jpg" alt="Long bronde balayage with soft waves" width="954" height="1200" loading="lazy"><figcaption>Bronde balayage</figcaption></figure>
+        <figure class="rv"><img src="img/work-pink-pixie.jpg" alt="Textured pixie cut in soft rose pink" width="1038" height="1200" loading="lazy"><figcaption>Rose pastel pixie</figcaption></figure>
+        <figure class="rv"><img src="img/work-curtain-bangs.jpg" alt="Golden blonde waves with curtain bangs" width="954" height="1200" loading="lazy"><figcaption>Golden blonde, curtain bangs</figcaption></figure>
+        <figure class="rv"><img src="img/work-brunette-dimension.jpg" alt="Long layered brunette with caramel dimension" width="945" height="1200" loading="lazy"><figcaption>Caramel dimension</figcaption></figure>
+        <figure class="rv"><img src="img/work-platinum-lob.jpg" alt="Platinum lob with long side-swept fringe" width="1030" height="1200" loading="lazy"><figcaption>Platinum lob</figcaption></figure>
+        <figure class="rv"><img src="img/work-blonde-bob.jpg" alt="Blended blonde bob with highlights" width="965" height="1200" loading="lazy"><figcaption>Highlighted bob</figcaption></figure>
+        <figure class="rv"><img src="img/work-long-blonde.jpg" alt="Long blonde layers with face-framing" width="913" height="1200" loading="lazy"><figcaption>Long face-framing layers</figcaption></figure>
+        <figure class="rv"><img src="img/work-brunette-waves.jpg" alt="Glossy brunette waves photographed on Summit Street" width="900" height="1200" loading="lazy"><figcaption>Glossy brunette waves</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="reels" aria-labelledby="reels-h">
+    <div class="wrap reels-head">
+      <div style="display:grid;gap:14px">
+        <span class="eyebrow">In motion</span>
+        <h2 id="reels-h">See the <em>movement</em></h2>
+      </div>
+      <a class="btn btn-ghost" href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">@artorabeautybar <span class="arrow">→</span></a>
+    </div>
+    <div class="reel-track" tabindex="0" aria-label="Short videos of recent work. Scroll sideways for more.">
+      <figure class="reel"><video muted loop playsinline preload="none" poster="media/reel-balayage.jpg"><source src="media/reel-balayage.mp4" type="video/mp4"></video><figcaption>Balayage, start to finish</figcaption></figure>
+      <figure class="reel"><video muted loop playsinline preload="none" poster="media/reel-waves.jpg"><source src="media/reel-waves.mp4" type="video/mp4"></video><figcaption>Soft beachy waves</figcaption></figure>
+      <figure class="reel"><video muted loop playsinline preload="none" poster="media/reel-ayfer.jpg"><source src="media/reel-ayfer.mp4" type="video/mp4"></video><figcaption>Ayfer at work</figcaption></figure>
+      <figure class="reel"><video muted loop playsinline preload="none" poster="media/reel-brunette.jpg"><source src="media/reel-brunette.mp4" type="video/mp4"></video><figcaption>Glossy brunette</figcaption></figure>
+      <figure class="reel"><video muted loop playsinline preload="none" poster="media/reel-blonde.jpg"><source src="media/reel-blonde.mp4" type="video/mp4"></video><figcaption>Blonde lob reveal</figcaption></figure>
+      <figure class="reel"><video muted loop playsinline preload="none" poster="media/reel-brushout.jpg"><source src="media/reel-brushout.mp4" type="video/mp4"></video><figcaption>The brush-out</figcaption></figure>
+      <figure class="reel"><video muted loop playsinline preload="none" poster="media/reel-bob.jpg"><source src="media/reel-bob.mp4" type="video/mp4"></video><figcaption>Bouncy blonde bob</figcaption></figure>
+      <a class="reel-ig" href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+        <strong>More on Instagram</strong>
+        <span>Follow along</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit-grid">
+      <div class="visit-copy">
+        <span class="eyebrow">Visit us</span>
+        <h2>Upstairs on <em>Summit Street</em></h2>
+        <div class="info">
+          <div>
+            <h3>Address</h3>
+            <address>8 South Summit Street<br>Tenafly, NJ 07670</address>
+            <span class="note">Use the side entrance; we're on the 2nd floor.</span>
+          </div>
+          <div>
+            <h3>Hours</h3>
+            <table class="hours" aria-label="Opening hours">
+              <tbody>
+                <tr class="closed" data-d="1"><td>Monday</td><td>Closed</td></tr>
+                <tr data-d="2"><td>Tuesday</td><td>10:00 – 6:00</td></tr>
+                <tr data-d="3"><td>Wednesday</td><td>10:00 – 6:00</td></tr>
+                <tr data-d="4"><td>Thursday</td><td>10:00 – 6:00</td></tr>
+                <tr data-d="5"><td>Friday</td><td>10:00 – 6:00</td></tr>
+                <tr data-d="6"><td>Saturday</td><td>9:30 – 6:00</td></tr>
+                <tr class="closed" data-d="0"><td>Sunday</td><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <div class="contact-lines">
+              <a href="tel:+12017680383">(201) 768-0383</a>
+              <a href="mailto:admin@artorabeautybar.com">admin@artorabeautybar.com</a>
+              <a href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">Instagram @artorabeautybar</a>
+            </div>
+          </div>
+          <div>
+            <h3>Booking</h3>
+            <p style="font-size:16px;color:var(--muted)">Book online any time through Vagaro, or call during opening hours.</p>
+          </div>
+        </div>
+        <div class="visit-cta">
+          <a class="btn btn-solid" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book Now <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=8+South+Summit+Street+Tenafly+NJ+07670" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <figure class="visit-card rv" style="margin:0">
+        <div class="frame"><img src="img/ayfer-smile.jpg" alt="Ayfer Deniz smiling" width="1340" height="1333" loading="lazy"></div>
+        <p>See you upstairs.</p>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <img class="foot-logo" src="img/logo.svg" alt="Artora Beauty Bar" width="410" height="200">
+    <ul class="foot-nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book</a></li>
+      <li><a href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+    <div class="fine">
+      <span>8 South Summit Street, Side Entrance, 2nd Floor · Tenafly, NJ 07670 · (201) 768-0383</span>
+      <span>© 2026 Artora Beauty Bar</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+12017680383">Call</a>
+  <a class="btn btn-solid" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book Now</a>
+</div>
+
+<script>
+(function(){
+  var d=document; d.documentElement.classList.add('js');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // nav background on scroll
+  var nav=d.querySelector('.nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>20)}
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  // highlight today's hours
+  var today=new Date().getDay(); var row=d.querySelector('.hours tr[data-d="'+today+'"]'); if(row) row.classList.add('today');
+  // hero video respects reduced motion
+  var hv=d.getElementById('heroVideo'); if(reduce&&hv){hv.removeAttribute('autoplay');hv.pause();}
+  if(!('IntersectionObserver' in window)) return;
+  // gentle reveal: only elements below the fold start hidden
+  var rv=[].slice.call(d.querySelectorAll('.rv'));
+  if(!reduce){
+    var vh=window.innerHeight;
+    rv.forEach(function(el){ if(el.getBoundingClientRect().top>vh*0.95) el.classList.add('pre'); });
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){ if(el.classList.contains('pre')) io.observe(el); });
+    setTimeout(function(){rv.forEach(function(el){el.classList.remove('pre')})},4000);
+  }
+  // reels play while visible
+  var vids=[].slice.call(d.querySelectorAll('.reel video'));
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target; if(e.isIntersecting&&!reduce){v.preload='auto';var p=v.play(); if(p&&p.catch)p.catch(function(){});} else v.pause();})},{threshold:.55});
+  vids.forEach(function(v){vio.observe(v)});
+  // services: swap image on hover/focus
+  var imgs=[].slice.call(d.querySelectorAll('.svc-visual img')), items=[].slice.call(d.querySelectorAll('.svc'));
+  items.forEach(function(li){
+    function act(){items.forEach(function(x){x.classList.toggle('active',x===li)}); imgs.forEach(function(im){im.classList.toggle('on',im.dataset.k===li.dataset.k)});}
+    li.addEventListener('mouseenter',act); li.addEventListener('focusin',act);
+  });
+})();
+</script>
+</body>
+</html>
